@@ -1,10 +1,6 @@
-00:24:00 **** Incremental Build of configuration Debug for project stm32 ****
+00:50:29 **** Incremental Build of configuration Debug for project stm32 ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
-../Core/Src/main.c:315:5: warning: statement will never be executed [-Wswitch-unreachable]
-  315 |     display7SEG(status);
-      |     ^~~~~~~~~~~~~~~~~~~
 arm-none-eabi-gcc -o "stm32.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\HK221\MCU\LAB\lab2\stm32\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: stm32.elf
  
@@ -13,15 +9,15 @@ arm-none-eabi-objdump -h -S  stm32.elf  > "stm32.list"
 arm-none-eabi-objcopy  -O ihex  stm32.elf  "stm32.hex"
 arm-none-eabi-objcopy  -O binary  stm32.elf  "stm32.bin"
    text	   data	    bss	    dec	    hex	filename
-   6980	     28	   1644	   8652	   21cc	stm32.elf
+   7676	     32	   1648	   9356	   248c	stm32.elf
 Finished building: default.size.stdout
- 
-Finished building: stm32.bin
-Finished building: stm32.hex
 Finished building: stm32.list
+Finished building: stm32.bin
+ 
+Finished building: stm32.hex
  
  
  
 
-00:24:01 Build Finished. 0 errors, 1 warnings. (took 1s.78ms)
+00:50:30 Build Finished. 0 errors, 0 warnings. (took 1s.381ms)
 

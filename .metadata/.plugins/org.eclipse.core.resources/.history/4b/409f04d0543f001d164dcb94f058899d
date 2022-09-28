@@ -302,10 +302,7 @@ void enable7SEG(int number){
 }
 
 int counter_timer2 = 50;
-int counter_timerLed = 100;
-int status = 2;
-int led=0;
-
+int status = 1;
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	if(counter_timer2>0){
@@ -349,24 +346,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 				default:
 					break;
 			}
-		}
-	}
-	if(counter_timerLed>0){
-		counter_timerLed--;
-		if(counter_timerLed==0){
-			counter_timerLed=100;
-			//TODO
-			switch(led){
-			case 0:
-				HAL_GPIO_WritePin(DOT_GPIO_Port, DOT_Pin, 0);
-				break;
-			case 1:
-				HAL_GPIO_WritePin(DOT_GPIO_Port, DOT_Pin, 1);
-				break;
-			default:
-				break;
-			}
-			led=!led;
 		}
 	}
 }

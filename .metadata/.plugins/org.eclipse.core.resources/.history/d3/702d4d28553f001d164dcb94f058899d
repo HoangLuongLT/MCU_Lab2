@@ -303,9 +303,8 @@ void enable7SEG(int number){
 
 int counter_timer2 = 50;
 int counter_timerLed = 100;
-int status = 2;
+int status = 1;
 int led=0;
-
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	if(counter_timer2>0){
