@@ -832,7 +832,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
  8000600:	601a      	str	r2, [r3, #0]
 		}
 	}
-
 }
  8000602:	bf00      	nop
  8000604:	3708      	adds	r7, #8
