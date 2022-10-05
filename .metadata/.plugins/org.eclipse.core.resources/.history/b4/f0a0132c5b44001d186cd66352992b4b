@@ -94,7 +94,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  //int led = 1;
+  int led = 1;
   int index_led = 0;
   int led_buffer[4] = {0, 1, 2, 3};
   int hour = 15, minute = 8, second = 50;
