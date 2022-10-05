@@ -12,7 +12,7 @@ void fsm_automatic_run(){
 	switch(status){
 		case INIT:
 			HAL_GPIO_WritePin(GPIOA, LED_RED_Pin, 0);
-			HAL_GPIO_WritePin(GPIOA, LED_R_Pin, 0);
+			//HAL_GPIO_WritePin(GPIOA, LED_R_Pin, 0);
 			if(timer0_flag==1){
 				status = AUTO_RED;
 				setTimer0(500);
