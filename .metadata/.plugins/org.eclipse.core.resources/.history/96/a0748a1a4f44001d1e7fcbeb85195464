@@ -224,6 +224,7 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 int counter_timer2 = 50;
 int status = 1;
+
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	if(counter_timer2>0){
 		counter_timer2--;
@@ -247,7 +248,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	}
 }
 
-void display7SEG(unsigned int n){
+void display7SEG(int n){
 	HAL_GPIO_WritePin(SEG0_GPIO_Port,SEG0_Pin,0);
 	HAL_GPIO_WritePin(SEG1_GPIO_Port,SEG1_Pin,0);
 	HAL_GPIO_WritePin(SEG2_GPIO_Port,SEG2_Pin,0);

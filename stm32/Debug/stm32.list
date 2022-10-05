@@ -429,7 +429,6 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 int counter_timer2 = 50;
 int status = 1;
-
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
  8000320:	b580      	push	{r7, lr}
  8000322:	b082      	sub	sp, #8
@@ -523,7 +522,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
 080003b0 <display7SEG>:
 
-void display7SEG(int n){
+void display7SEG(unsigned int n){
  80003b0:	b580      	push	{r7, lr}
  80003b2:	b082      	sub	sp, #8
  80003b4:	af00      	add	r7, sp, #0

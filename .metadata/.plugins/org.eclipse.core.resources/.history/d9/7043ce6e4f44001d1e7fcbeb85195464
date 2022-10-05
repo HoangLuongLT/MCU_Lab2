@@ -247,7 +247,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	}
 }
 
-void display7SEG(unsigned int n){
+void display7SEG(int8_t n){
 	HAL_GPIO_WritePin(SEG0_GPIO_Port,SEG0_Pin,0);
 	HAL_GPIO_WritePin(SEG1_GPIO_Port,SEG1_Pin,0);
 	HAL_GPIO_WritePin(SEG2_GPIO_Port,SEG2_Pin,0);
